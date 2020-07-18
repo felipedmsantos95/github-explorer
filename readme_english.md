@@ -27,7 +27,7 @@ $ cd github-explorer
 
 ### Scripts para execução do projeto
 
-In the project directory, you can run:
+In the project directory for the first time, you must to run the `yarn` command to install dependencies, then you'll can run the scripts:
 
 #### `yarn start`
 

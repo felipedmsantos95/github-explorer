@@ -27,7 +27,7 @@ $ cd github-explorer
 
 ### Scripts para execução do projeto
 
-Dentro do diretório do projeto, você pode rodar os scripts:
+Dentro do diretório do projeto pela primeira vez, você deve executar o comando `yarn` para instalar as dependências, então será possível rodar os seguintes scripts:
 
 #### `yarn start`
 
