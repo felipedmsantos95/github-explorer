@@ -40,7 +40,7 @@ Você poderá visualizar quaisquer erros no console.
 #### `yarn test`
 
 Executa o modo teste da aplicação com modo interativo.<br />
-Você pode consultar [running tests](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
+Você pode consultar [executando testes](https://facebook.github.io/create-react-app/docs/running-tests) para mais informações.
 
 #### `yarn build`
 
@@ -49,5 +49,5 @@ Desta forma, isso organiza o React no modo de produção e otimiza a compilaçã
 
 A compilação é minimalista e os nomes dos arquivos incluem os hashes.<br />
 
-Você pode consultar [deployment](https://facebook.github.io/create-react-app/docs/deployment) for para mais informações.
+Você pode consultar [produção](https://facebook.github.io/create-react-app/docs/deployment) for para mais informações.
 
