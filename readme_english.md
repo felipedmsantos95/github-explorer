@@ -1,24 +1,24 @@
 
 <!-- ![img/gobarber.png](img/gobarber.png) -->
 
-## Sobre
+## About
 
-Plataforma web em React.js que faz conexão com a API pública do Github, desta forma sendo possível explorar repositórios de usuários no Github.
+React.js web platform that connects to the public Github API, making it possible to explore user repositories on Github.
 
-## Tecnologias utilizadas
+## Technologies used
 
 - React.js - Frontend
 
-## Requisitos para execução dos módulos
+## Requirements
 
-Para executar o projeto é necessário ter os seguintes requisitos instalados no sistema:
+To execute the project it is necessary to have the following requirements installed on the system:
 
-- Node 12.x ou superior
-- Yarn 1.21 ou superior
+- Node 12.x or higher
+- Yarn 1.21 or higher
 
-## Executando o projeto
+## Running the project
 
-### Clonando o projeto:
+### Cloning the project
 
 ```bash
 $ git clone https://github.com/felipedmsantos95/github-explorer
@@ -48,7 +48,6 @@ Builds the app for production to the `build` folder.<br />
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
 The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
