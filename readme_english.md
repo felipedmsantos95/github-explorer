@@ -2,7 +2,10 @@
 <!-- ![img/gobarber.png](img/gobarber.png) -->
 # Github Explorer
 
-<a href="readme.md">Versão em português</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+<p align="center">
+    <a href="readme_english.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+    <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
+</p>
 
 ## About
 
