@@ -2,6 +2,8 @@
 <!-- ![img/gobarber.png](img/gobarber.png) -->
 # Github Explorer
 
+![English Version](readme_english.md)
+
 ## About
 
 React.js web platform that connects to the public Github API, making it possible to explore user repositories on Github.
