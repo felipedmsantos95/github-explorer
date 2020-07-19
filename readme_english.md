@@ -7,7 +7,11 @@
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
 </p>
 
-![src/assets/github_explorer.gif](src/assets/github_explorer.gif)
+## Application preview
+
+<p align="center">
+  <img src="link"/>
+</p>
 
 ## About
 
