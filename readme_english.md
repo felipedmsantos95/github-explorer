@@ -7,6 +7,8 @@
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
 </p>
 
+![src/assets/github_explorer.gif](src/assets/github_explorer.gif)
+
 ## About
 
 React.js web platform that connects to the public Github API, making it possible to explore user repositories on Github.

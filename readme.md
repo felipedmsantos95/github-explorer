@@ -1,11 +1,13 @@
 
-<!-- ![img/gobarber.png](img/gobarber.png) -->
+
 # Github Explorer
-Em desenvolvimento...
+
 <p align="center">
     <a href="readme_english.md">English</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
     <a href="readme.md">Português</a>&nbsp;&nbsp;&nbsp;
 </p>
+
+![src/assets/github_explorer.gif](src/assets/github_explorer.gif)
 
 ## Sobre
 
