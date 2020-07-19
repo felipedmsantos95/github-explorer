@@ -9,9 +9,9 @@
 
 ## Application preview
 
-<p align="center">
+<!-- <p align="center">
   <img src="link"/>
-</p>
+</p> -->
 
 ## About
 
