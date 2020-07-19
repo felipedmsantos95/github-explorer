@@ -1,59 +1,98 @@
-import React from 'react';
+import React, { useState, useEffect, FormEvent } from 'react';
 import { FiChevronRight } from 'react-icons/fi';
-import logoImg from '../../assets/logo.svg';
+import { Link } from 'react-router-dom';
 
-import { Title, Form, Repositories } from './styles';
+import api from '../../services/api';
+import logoImg from '../../assets/logo.svg';
+/* eslint-disable camelcase */
+import { Title, Form, Repositories, Error } from './styles';
+
+interface Repository {
+  full_name: string;
+  description: string;
+  owner: {
+    login: string;
+    avatar_url: string;
+  };
+}
 
 const Dashboard: React.FC = () => {
+  const [newRepo, setNewRepo] = useState('');
+  const [inputError, setInputError] = useState('');
+  const [repositories, setRepositories] = useState<Repository[]>(() => {
+    const storagedRepositories = localStorage.getItem(
+      '@GithubExplorer:repositories',
+    );
+
+    if (storagedRepositories) {
+      return JSON.parse(storagedRepositories);
+    }
+    return [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem(
+      '@GithubExplorer:repositories',
+      JSON.stringify(repositories),
+    );
+  }, [repositories]);
+
+  async function handleAddRepository(
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> {
+    event.preventDefault();
+    if (!newRepo) {
+      setInputError('Digite autor/nome do repositório');
+      return;
+    }
+
+    try {
+      const response = await api.get<Repository>(`repos/${newRepo}`);
+
+      const repository = response.data;
+
+      setRepositories([...repositories, repository]);
+      setNewRepo('');
+      setInputError('');
+    } catch (err) {
+      setInputError('Erro na busca por este repositório');
+    }
+  }
+
   return (
     <>
       <img src={logoImg} alt="Github Explorer" />
       <Title>Explore repositórios no Github</Title>
 
-      <Form>
-        <input placeholder="Digite o nome do repositório" />
+      <Form hasError={!!inputError} onSubmit={handleAddRepository}>
+        <input
+          value={newRepo}
+          onChange={e => setNewRepo(e.target.value)}
+          placeholder="Digite o nome do repositório"
+        />
         <button type="submit">Pesquisar</button>
       </Form>
 
+      {inputError && <Error>{inputError}</Error>}
+
       <Repositories>
-        <a href="teste">
-          <img
-            src="https://avatars0.githubusercontent.com/u/23322128?s=460&u=a043a598db52877f3edaf4972f8def44e7ae0016&v=4"
-            alt="Felipe Santos"
-          />
-          <div>
-            <strong>felipedmsantos95/log-vaccine</strong>
-            <p>Cartão de vacina digital com blockchain!</p>
-          </div>
+        {repositories.map(repository => (
+          <Link
+            key={repository.full_name}
+            to={`/repository/${repository.full_name}`}
+          >
+            <img
+              src={repository.owner.avatar_url}
+              alt={repository.owner.login}
+            />
+            <div>
+              <strong>{repository.full_name}</strong>
+              <p>{repository.description}</p>
+            </div>
 
-          <FiChevronRight size={20} />
-        </a>
-
-        <a href="teste">
-          <img
-            src="https://avatars0.githubusercontent.com/u/23322128?s=460&u=a043a598db52877f3edaf4972f8def44e7ae0016&v=4"
-            alt="Felipe Santos"
-          />
-          <div>
-            <strong>felipedmsantos95/log-vaccine</strong>
-            <p>Cartão de vacina digital com blockchain!</p>
-          </div>
-
-          <FiChevronRight size={20} />
-        </a>
-
-        <a href="teste">
-          <img
-            src="https://avatars0.githubusercontent.com/u/23322128?s=460&u=a043a598db52877f3edaf4972f8def44e7ae0016&v=4"
-            alt="Felipe Santos"
-          />
-          <div>
-            <strong>felipedmsantos95/log-vaccine</strong>
-            <p>Cartão de vacina digital com blockchain!</p>
-          </div>
-
-          <FiChevronRight size={20} />
-        </a>
+            <FiChevronRight size={20} />
+          </Link>
+        ))}
       </Repositories>
     </>
   );
