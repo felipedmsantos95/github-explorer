@@ -8,10 +8,10 @@
 </p>
 
 ## Prévia da Aplicação
-<!--
+
 <p align="center">
-  <img src="link"/>
-</p> -->
+  <img src="https://github.com/felipedmsantos95/github-explorer/blob/master/src/assets/github_explorer.gif"/>
+</p>
 
 ## Sobre
 
