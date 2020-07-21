@@ -19,7 +19,7 @@ Plataforma web em React.js que faz conexão com a API pública do Github, desta 
 
 ## Tecnologias utilizadas
 
-- React.js - Frontend
+- React.js
 
 ## Requisitos
 
