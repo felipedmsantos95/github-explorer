@@ -10,7 +10,7 @@
 ## Prévia da Aplicação
 
 <p align="center">
-  <img src="https://github.com/felipedmsantos95/github-explorer/blob/master/src/assets/github_explorer.gif"/>
+  <img src="https://github.com/felipedmsantos95/github-explorer/blob/master/img/github_explorer.gif"/>
 </p>
 
 ## Sobre
